@@ -4,7 +4,7 @@
 \header {
   title = "Anemos (Full Score)"
   subtitle = "Etude in C minor - 48 Bars"
-  composer = "Jimin Ha / AI-assisted"
+  composer = "Jimin Ha "
 }
 
 global = {
