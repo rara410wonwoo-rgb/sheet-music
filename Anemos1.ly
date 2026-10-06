@@ -2,9 +2,9 @@
 \language "english"
 
 \header {
-  title = "Anemos (Full Score)"
-  subtitle = "Etude in C minor - 48 Bars"
-  composer = "Jimin Ha "
+  title = "Etude in C minor : The Foreign Land"
+  subtitle = "Anxiety, Despair, Vengeance, and Aftermath"
+  composer = "AI-assisted / Jimin Ha"
 }
 
 global = {
@@ -16,179 +16,99 @@ right = {
   \global
   \clef treble
 
-  % A - The blow and the silence
-  \mark \markup { \bold "A - The blow and the silence" }
-  \tempo "Risoluto, poi agitato" 4 = 120
+  % I. Isolation & Anxiety (1-8)
+  \mark \markup { \bold "I. Isolation & Anxiety (고립과 불안)" }
+  \tempo "Agitato, con ansia" 4 = 112
   
-  % 1-4
-  <c'' ef'' g'' c'''>4\ff r4 r8 d''16\mp ef'' b'8 c'' |
-  r8 d''16 ef'' b'8 c'' r8 d''16 ef'' b'8 c'' |
-  r8 d''16 ef'' b'8 c'' r8 d''16 ef'' b'8 c'' |
-  r8 d''16 ef'' b'8 c'' r8 d''16 ef'' b'8 c'' |
+  \repeat unfold 2 { c''16\p d'' ef'' g'' c''' g'' ef'' d'' } | % 1. Cm(add9)
+  \repeat unfold 2 { b'16 d'' ef'' g'' b'' g'' ef'' d'' } | % 2. Cm(maj7)/B
+  \repeat unfold 2 { bf'16 d'' ef'' g'' bf'' g'' ef'' d'' } | % 3. Cm7/Bb
+  <a' c'' ef'' a''>4\f r4 r2 | % 4. Am7(b5) - Abrupt Stop
   
-  % 5-8
-  <c'' ef'' af'' c'''>4\mf r4 r8 d''16 ef'' b'8 c'' |
-  <b' d'' g'' b''>4 r4 r8 d''16 ef'' b'8 c'' |
-  <a' c'' fs'' a''>4 r4 r8 d''16 ef'' b'8 c'' |
-  <af' b' f'' af''>4 r4 r8 d''16 ef'' b'8 c'' |
+  \repeat unfold 2 { af'16\p c'' ef'' g'' af'' g'' ef'' c'' } | % 5. Abmaj7
+  \repeat unfold 2 { f'16 af' c'' d'' f'' d'' c'' af' } | % 6. Fm6
+  <g' c'' d'' g''>2\mf <g' c'' d'' g''>2 | % 7. Gsus4
+  <af' b' d'' f'' af''>1\sfz | % 8. G7(b9)
 
-  % 9-12
-  \tempo "Con impeto" 4 = 128
-  \repeat unfold 4 { c''16\f d'' ef'' c'' } |
-  \repeat unfold 4 { d''16 ef'' g'' d'' } |
-  \repeat unfold 4 { c''16 f'' af'' c'' } |
-  \repeat unfold 4 { c''16 d'' f'' c'' } |
-
-  % 13-16
-  \tempo "Poco a poco calmando" 4 = 124
-  \repeat unfold 4 { df''16 f'' af'' df'' } |
-  \repeat unfold 4 { c''16 ef'' fs'' c'' } |
-  \repeat unfold 4 { b'16 d'' f'' b' } |
-  <c'' ef'' g'' c'''>1\p |
-
-  % B - Behind the silence
-  \mark \markup { \bold "B - Behind the silence" }
-  \tempo "Cantabile, stesso respiro" 4 = 108
+  % II. Despair & Fear (9-16)
+  \mark \markup { \bold "II. Despair & Fear (절망과 공포)" }
+  \tempo "Grave, doloroso" 4 = 60
   
-  % 17-20
-  d''4.\p ef''8 b'2 | 
-  c''2. r4 |
-  d''4. ef''8 b'2 | 
-  c''2. r4 |
-
-  % 21-24 (Eb minor shift)
-  f''4.\pp gf''8 d''2 | 
-  ef''2. r4 |
-  ef''4. f''8 cs''2 | 
-  d''2. r4 |
-
-  % C - Longing for release
-  \mark \markup { \bold "C - Longing for release" }
-  \tempo "Con desiderio" 4 = 112
+  <af' c'' ef'' g''>2\p <af' c'' ef'' g''> | % 9. Fm9
+  <af' df'' f'' af''>2 <af' df'' f'' af''> | % 10. Dbmaj7 (Neapolitan)
+  <g' c'' ef'' g''>2 <g' c'' ef'' g''> | % 11. Cm/G
+  <f' af' b' d''>2 <f' af' b' d''> | % 12. Ddim7/F
   
-  % 25-28
-  <g' c'' ef'' g''>2\mp <g' c'' ef'' g''> |
-  <af' c'' ef'' af''>2 <af' c'' ef'' af''> |
-  <af' c'' f'' af''>2\mf <af' c'' f'' af''> |
-  <af' df'' f'' af''>2 <af' df'' f'' af''> |
+  <g' bf' d'' g''>2 <g' bf' d'' g''> | % 13. Ebmaj7
+  <ef' g' c'' ef''>2 <ef' g' c'' ef''> | % 14. Abmaj7
+  <f' af' c'' f''>2 <f' af' c'' f''> | % 15. Dm7(b5)
+  <f' af' b' d''>2\cresc <f' af' b' d''> | % 16. G7(b9)
 
-  % 29-32
-  \tempo "Poco a poco animando" 4 = 116
-  <g' c'' ef'' g''>2 <g' c'' ef'' g''> |
-  <f' c'' d'' f''>2 <f' c'' d'' f''> |
-  <f' b' d'' f''>2 <f' b' d'' f''> |
-  <g' c'' ef'' g''>2 <g' c'' ef'' g''> |
-
-  % D - Refusing to retreat
-  \mark \markup { \bold "D - Refusing to retreat" }
-  \tempo "Appassionato" 4 = 124
+  % III. The Surge of Vengeance (17-24)
+  \mark \markup { \bold "III. The Surge of Vengeance (복수의 폭발)" }
+  \tempo "Presto con fuoco" 4 = 132
   
-  % 33-36
-  <c'' ef'' g'' c'''>4\f r4 r8 d''16 ef'' b'8 c'' |
-  r8 d''16 ef'' b'8 c'' r8 d''16 ef'' b'8 c'' |
-  r8 d''16 ef'' b'8 c'' r8 d''16 ef'' b'8 c'' |
-  r8 d''16 ef'' b'8 c'' r8 d''16 ef'' b'8 c'' |
-
-  % 37-40
-  \tempo "Con slancio" 4 = 128
-  \repeat unfold 4 { c''16 d'' ef'' c'' } |
-  \repeat unfold 4 { c''16 f'' af'' c'' } |
-  \repeat unfold 4 { df''16 f'' af'' df'' } |
-  \repeat unfold 4 { c''16 ef'' fs'' c'' } |
-
-  % 41-44
-  \tempo "Con fuoco" 4 = 132
-  <b' d'' f'' b''>4\ff <b' d'' f'' b''> <b' d'' f'' b''> <b' d'' f'' b''> |
-  <c'' ef'' g'' c'''>4 <c'' ef'' g'' c'''> <c'' ef'' g'' c'''> <c'' ef'' g'' c'''> |
-  <b' d'' g'' b''>4 <b' d'' g'' b''> <b' d'' g'' b''> <b' d'' g'' b''> |
-  <b' d'' f'' b''>4 <b' d'' f'' b''> <b' d'' f'' b''> <b' d'' f'' b''> |
-
-  % E - Breaking free (Revised Ending)
-  \mark \markup { \bold "E - Breaking free" }
-  \tempo "Grandioso" 4 = 132
+  <c'' ef'' g'' c'''>4\fff <c'' ef'' g'' c'''>8 <c'' ef'' g'' c'''> <c'' ef'' g'' c'''>4 <c'' ef'' g'' c'''> | % 17. Cm
+  <df'' g'' bf'' df'''>4 <df'' g'' bf'' df'''>8 <df'' g'' bf'' df'''> <df'' g'' bf'' df'''>4 <df'' g'' bf'' df'''> | % 18. Eb7
+  <c'' ef'' af'' c'''>4 <c'' ef'' af'' c'''>8 <c'' ef'' af'' c'''> <c'' ef'' af'' c'''>4 <c'' ef'' af'' c'''> | % 19. Abmaj7
+  <c'' f'' af'' df'''>4 <c'' f'' af'' df'''>8 <c'' f'' af'' df'''> <c'' f'' af'' df'''>4 <c'' f'' af'' df'''> | % 20. Dbmaj7
   
-  % 45-48
-  <c'' ef'' g'' d'''>4\fff <c'' ef'' g'' d'''>4 <c'' ef'' g'' d'''>4 <c'' ef'' g'' d'''>4 |
-  <c'' f'' af'' ef'''>2 <df'' f'' af'' df'''>2 |
-  <c'' ef'' fs'' af''>2 <b' d'' f'' af''>2 |
-  \tempo "Largamente, risoluto" 4 = 116
-  <c' ef' g' c''>1\fermata \bar "|."
+  <c'' f'' af'' c'''>1 | % 21. Fm
+  <c'' ef'' fs'' af''>1 | % 22. Ger+6 (독일 증6화음)
+  <b' d'' f'' af''>1 | % 23. G7(b9)
+  <b' d'' f'' af''>4\sfz r4 r2 | % 24. G7(b9) Cut off
+
+  % IV. The Lingering Aftermath (25-28)
+  \mark \markup { \bold "IV. The Lingering Aftermath (복수 뒤의 잿빛 여운)" }
+  \tempo "Lento misterioso" 4 = 54
+  
+  <d'' g'' c'''>1\pp | % 25. Cm(add9)
+  <ef'' g'' c'''>1 | % 26. Abmaj7/C
+  <d'' f'' af'' c'''>1 | % 27. Fm6/C
+  <d'' g'' b'' c'''>1\fermata \bar "|." % 28. Cm(maj9) - Unresolved Ending
 }
 
 left = {
   \global
   \clef bass
 
-  % 1-4
-  <c, c>4\ff r4 r2 |
-  <b,, b,>1\mp |
-  <bf,, bf,>1 |
-  <a,, a,>1 |
+  % I. Isolation (1-8)
+  <c c'>4\p r4 <c c'>4 r4 |
+  <b, b>4 r4 <b, b>4 r4 |
+  <bf, bf>4 r4 <bf, bf>4 r4 |
+  <a,, a,>4\f r4 r2 |
   
-  % 5-8
-  <af,, af,>1\mf |
-  <g,, g,>1 |
-  <fs,, fs,>1 |
-  <g,, g,>1 |
+  <af,, af,>4\p r4 <af,, af,>4 r4 |
+  <f,, f,>4 r4 <f,, f,>4 r4 |
+  <g,, g,>4 d g r4 |
+  <g,, g,>1\sfz |
 
-  % 9-12
-  <c, c>4\f <g, g> <ef, ef> <g, g> |
-  <ef ef'>4 <bf, bf> <g, g> <bf, bf> |
-  <f, f>4 <c c'> <af, af> <c c'> |
-  <d, d>4 <a, a> <f, f> <a, a> |
-
-  % 13-16
-  <f, f>4 <c c'> <af, af> <c c'> |
-  <af, af>4 <ef ef'> <c c'> <ef ef'> |
-  <g,, g,>4 <d, d> <b,, b,> <d, d> |
-  <c, c>1\p |
-
-  % 17-20 (Rachmaninoff style wide arpeggios)
-  <c, c>4\p g c' ef' |
-  <c, c>4 g c' ef' |
-  <b,, b,>4 g d' f' |
-  <bf,, bf,>4 g df' e' |
+  % II. Despair (9-16) - Rachmaninoff Arpeggios
+  f,,8\p c, f, af, c r r4 |
+  df,,8 af,, df, f, af, r r4 |
+  g,,8 ef, g, c ef r r4 |
+  f,,8 d, f, af, b, r r4 |
   
-  % 21-24
-  <ef,, ef,>4\pp bf, ef gf |
-  <af,, af,>4 ef gf cf' |
-  <a,, a,>4 c f a |
-  <ef,, ef,>4 bf, ef gf |
+  ef,,8 bf,, ef, g, bf, r r4 |
+  af,,8 ef, af, c ef r r4 |
+  d,,8 a,, d, f, af, r r4 |
+  g,,8 d, f, g, b, r r4 |
 
-  % 25-28
-  <c, c>4\mp g c' ef' |
-  <af,, af,>4 ef af c' |
-  <f,, f,>4\mf c f af |
-  <f,, f,>4 df f af |
+  % III. Vengeance (17-24) - Liszt Octaves
+  <c, c>4\fff <c, c>8 <c, c> <c, c>4 <c, c> |
+  <ef, ef>4 <ef, ef>8 <ef, ef> <ef, ef>4 <ef, ef> |
+  <af,, af,>4 <af,, af,>8 <af,, af,> <af,, af,>4 <af,, af,> |
+  <df,, df,>4 <df,, df,>8 <df,, df,> <df,, df,>4 <df,, df,> |
+  
+  <f,, f,>1 |
+  <af,, af,>1 |
+  <g,, g,>1 |
+  <g,, g,>4\sfz r4 r2 |
 
-  % 29-32
-  <g,, g,>4 d g b |
-  <d, d>4 a c' f' |
-  <g,, g,>4 d f b |
-  <c, c>4 g c' ef' |
-
-  % 33-36
-  <c, c>4\f g c' ef' |
-  <b,, b,>4 g d' f' |
-  <bf,, bf,>4 g c' e' |
-  <a,, a,>4 c ef fs |
-
-  % 37-40
-  <af,, af,>4 ef af c' |
-  <f,, f,>4 c f af |
-  <f,, f,>4 df f af |
-  <af,, af,>4 ef af c' |
-
-  % 41-44
-  <g,, g,>4\ff d f b |
-  <c, c>4 g c' ef' |
-  <b,, b,>4 g d' f' |
-  <g,, g,>4 d f b |
-
-  % 45-48
-  <c, c>4\fff <c, c>4 <c, c>4 <c, c>4 |
-  <c, c>2 <f,, f,>2 |
-  <af,, af,>2 <g,, g,>2 |
+  % IV. Aftermath (25-28) - Pedal Point
+  <c,, c,>1\pp ~ |
+  <c,, c,>1 ~ |
+  <c,, c,>1 ~ |
   <c,, c,>1\fermata \bar "|."
 }
 
